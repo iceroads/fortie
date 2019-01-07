@@ -382,12 +382,14 @@ class Fortie
   ) {
     // Set up Guzzle client
     $client = new \GuzzleHttp\Client([
-      'base_uri'  => $endpoint,
-      'headers'   => [
-        'Access-Token'  => $access_token,
-        'Client-Secret' => $client_secret,
-        'Content-Type'  => $content_type,
-        'Accept'        => $accepts
+      'base_url'  => $endpoint,
+      'defaults' => [
+          'headers'   => [
+              'Access-Token'  => $access_token,
+              'Client-Secret' => $client_secret,
+              'Content-Type'  => $content_type,
+              'Accept'        => $accepts
+          ],
       ],
       'timeout'   => 3.0,
     ]);
