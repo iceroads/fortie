@@ -6,13 +6,27 @@ A simple [Fortnox](https://www.fortnox.se/) PHP package, including Laravel Servi
 
 ## Installation
 
-The easiest way to install this package is through Composer.
+Update composer.json
 
 ```
-composer require wetcat/fortie dev-master
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/iceroads/fortie"
+        }
+    ],
+    "require": {
+        "wetcat/fortie": "dev-master"
+    }
+}
 ```
 
-Or add `"wetcat/fortie": "dev-master"` to your `composer.json`.
+Run
+
+```
+composer update
+```
 
 If you don't have Composer you should [install it](https://getcomposer.org/download/).
 
