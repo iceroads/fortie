@@ -95,19 +95,10 @@ abstract class ProviderBase
   /**
    * Handle the response, whether it's JSON or XML.
    */
-  protected function handleResponse (\GuzzleHttp\Psr7\Response $response)
+  protected function handleResponse ($response)
   {
-    $content_type = $response->getHeader('Content-Type');
-
-    if (in_array('application/json', $content_type)) {
+      $content_type = $response->getHeader('Content-Type');
       return json_decode($response->getBody());
-    }
-
-    else if (in_array('application/xml', $content_type)) {
-      $reader = new \Sabre\Xml\Reader();
-      $reader->xml($response->getBody());
-      return $reader->parse();
-    }
   }
 
 
