@@ -107,6 +107,7 @@ class Provider extends ProviderBase {
     'Total',
     'Unit',
     'VAT',
+    'OrderRows',
   ];
 
 
@@ -173,13 +174,14 @@ class Provider extends ProviderBase {
     'Project',
     'Unit',
     'VAT',
+    'OrderRows',
   ];
 
 
   protected $required_create = [
     'CustomerNumber',
-    'Description',
-    'OrderedQuantity',
+    //'Description',
+    //'OrderedQuantity',
   ];
 
 
